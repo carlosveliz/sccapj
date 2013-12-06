@@ -14,22 +14,12 @@
 
     <!-- Custom styles for this template -->
     <link href="css/unittype.css" rel="stylesheet">
-
+    <link href="css/home.css" rel="stylesheet">
     <!-- jQuery core JavaScript -->
     <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
 
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-
 
     <meta content="clickberry-extension-here"><style type="text/css"></style>
   </head>
@@ -72,8 +62,8 @@
 
     <div class="container">
       <ol class="breadcrumb">
-          <li><a>Curación de Metas</a></li>
-          <li><a>Corte de Apelaciones</a></li>
+          <li><a href="home.html">Curación de Metas</a></li>
+          <li><a href="unittype.html">Corte de Apelaciones</a></li>
           <li>Copiapó</li>
         </ol>
 
@@ -84,7 +74,7 @@
         <div class="panel-body">
 
 
-          <div class="col-md-3">
+          <div class="col-md-3 complete-percent">
             <h3>Cumplimiento: 40%</h3>
           </div>
 
@@ -94,17 +84,17 @@
                 <tr>
                   <td>
                     <p>
-                      <b>Nivel de Supervisión:</b><br />Presidente de Corte
-                    </p>
-                  </td>
-                  <td>
-                    <p>
                       <b>Cargo Global de Trabajo:</b><br />1.000 Causas/mes
                     </p>
                   </td>
                   <td>
                     <p>
                       <b>Población Atendida:</b><br />15.000 Habitantes
+                    </p>
+                  </td>
+                  <td>
+                    <p>
+                      <b>M2 Disponibles por Unidad:</b><br />1200 M2
                     </p>
                   </td>
                 </tr>
@@ -119,11 +109,7 @@
                       <b>Personal Disponible:</b><br />80
                     </p>
                   </td>
-                  <td>
-                    <p>
-                      <b>M2 Disponibles por Unidad:</b><br />1200 M2
-                    </p>
-                  </td>
+                  <td></td> <!-- only aesthetic -->
                 </tr>
                </tbody>
             </table>
@@ -144,8 +130,8 @@
               <th>Objetivo</th>
               <th>Cumple</th>
               <th>Metas Informadas</th>
-              <th>Metas revisadas</th>
-              <th>Recamaciones</th>
+              <th>Metas Validadas</th>
+              <th>Requerimientos Pendientes</th>
               <th>Nº Observaciones</th>
               <th>Revisado</th>
               <th>Estado</th>
@@ -180,7 +166,7 @@
               <td>SI</td>
               <td>rojo</td>
             </tr>
-            <tr class="danger">
+            <tr>
               <td>3</td>
               <td>Causas en estado de ser vistas</td>
               <td>Colectiva</td>
@@ -202,6 +188,7 @@
         <div class="panel-heading">
           <h3 class="panel-title">
             <a data-toggle="collapse" data-parent="#accordion" href="#collapseDetail">Detalle</a>
+            <button type="button" class="btn btn-primary btn-xs pull-right">MARCAR REVISIÓN COMPLETA</button>
           </h3>
         </div>
         <div id="collapseDetail" class="panel-collapse collapse in">
@@ -273,7 +260,7 @@
             </div>
             <div class="col-md-7"><br />
               <div class="panel panel-default">
-                <div class="panel-heading">Antecedentes</div>
+                <div class="panel-heading"><b>Antecedentes</b></div>
                 <div class="table-responsive">
                   <table class="table table-hover table-condensed table-bordered">
                     <thead>
@@ -334,9 +321,14 @@
               <p>Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in, eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id. Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos. Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu, eirmod consectetuer signiferumque eu per. In usu latine equidem dolores. Quo no falli viris intellegam, ut fugit veritus placerat per.</p>
             </div>
             <div class="row"></div>
-            <div class="col-md-6">
+            <div class="col-md-12">
+              <h4>Causas Externas:</h4>
+              <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+            </div>
+
+            <div class="col-md-7">
               <div class="panel panel-default">
-                <div class="panel-heading">Antecedentes</div>
+                <div class="panel-heading"><b>Requerimientos</b></div>
                 <div class="table-responsive">
                   <table class="table table-hover table-condensed table-bordered">
                     <thead>
@@ -345,6 +337,7 @@
                         <th>Hora</th>
                         <th>Descripción</th>
                         <th>Documento</th>
+                        <th>Estado</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -352,22 +345,24 @@
                         <td>10-mar-2014</td>
                         <td>10:25</td>
                         <td>Informe Nro X</td>
-                        <td><a href="">Archivo1</a></td>
+                        <td><a href="pdf.pdf">Archivo1</a></td>
+                        <td><span class="label label-success">COMPLETO</span></td>
                       </tr>
                       <tr>
                         <td>10-mar-2014</td>
                         <td>14:50</td>
                         <td>Informe Nro Y</td>
-                        <td><a href="">Archivo2</a></td>
+                        <td><a href="pdf.pdf">Archivo2</a></td>
+                        <td><span class="label label-warning">PENDIENTE</span></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-              </div><!-- Antecedentes-->
+              </div><!-- Requerimientos-->
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
               <div class="panel panel-default">
-                <div class="panel-heading">Reclamaciones</div>
+                <div class="panel-heading"><b>Antecedentes</b></div>
                 <div class="table-responsive">
                   <table class="table table-hover table-condensed table-bordered">
                     <thead>
@@ -383,19 +378,19 @@
                         <td>10-mar-2014</td>
                         <td>10:25</td>
                         <td>Reclamación Nro X</td>
-                        <td><a href="">Archivo1</a></td>
+                        <td><a href="pdf.pdf">Archivo1</a></td>
                       </tr>
                       <tr>
                         <td>10-mar-2014</td>
                         <td>14:50</td>
                         <td>Reclamación Nro Y</td>
-                        <td><a href="">Archivo2</a></td>
+                        <td><a href="pdf.pdf">Archivo2</a></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-            </div> <!-- Reclamaciones-->
+            </div> <!-- Antecedentes-->
           </div>
         </div>
       </div>

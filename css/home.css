@@ -1,4 +1,11 @@
+.table > thead > tr > th, .table > tbody > tr > td {
+    font-size: 12px;
+}
 
-main-padding {
-	margin-top: 60px;	
+.panel .table {
+    margin-bottom: 0;
+}
+
+.panel-body .col-md-3 {
+    padding-left: 0;
 }
